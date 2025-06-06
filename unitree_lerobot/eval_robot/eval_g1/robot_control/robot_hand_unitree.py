@@ -53,7 +53,7 @@ class Dex3_1_Controller:
         if not self.Unit_Test:
             pass
         else:
-            ChannelFactoryInitialize(0)
+            ChannelFactoryInitialize(1, "lo")
 
         # initialize handcmd publisher and handstate subscriber
         self.LeftHandCmb_publisher = ChannelPublisher(kTopicDex3LeftCommand, HandCmd_)
@@ -245,7 +245,7 @@ class Gripper_Controller:
             self.smooth_filter = None
 
         if self.Unit_Test:
-            ChannelFactoryInitialize(0)
+            ChannelFactoryInitialize(1, "lo")
  
         # initialize handcmd publisher and handstate subscriber
         self.GripperCmb_publisher = ChannelPublisher(kTopicGripperCommand, MotorCmds_)

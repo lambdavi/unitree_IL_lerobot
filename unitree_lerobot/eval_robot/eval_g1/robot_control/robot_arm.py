@@ -61,7 +61,7 @@ class G1_29_ArmController:
         self._gradual_time = None
 
         # initialize lowcmd publisher and lowstate subscriber
-        ChannelFactoryInitialize(0)
+        ChannelFactoryInitialize(1, "lo")
         self.lowcmd_publisher = ChannelPublisher(kTopicLowCommand, LowCmd_)
         self.lowcmd_publisher.Init()
         self.lowstate_subscriber = ChannelSubscriber(kTopicLowState, LowState_)
@@ -325,7 +325,7 @@ class H1_2_ArmController:
         self._gradual_time = None
 
         # initialize lowcmd publisher and lowstate subscriber
-        ChannelFactoryInitialize(0)
+        ChannelFactoryInitialize(1, "lo")
         self.lowcmd_publisher = ChannelPublisher(kTopicLowCommand, LowCmd_)
         self.lowcmd_publisher.Init()
         self.lowstate_subscriber = ChannelSubscriber(kTopicLowState, LowState_)
